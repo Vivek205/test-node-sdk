@@ -17,7 +17,7 @@ const main = async (firstNumber, secondNumber) => {
   const orgId = "6ce80f485dae487688c3a083688819bb";
   const serviceId = "test_freecall";
   const groupName = "default_group";
-  const paymentStrategy = new DefaultPaymentStrategy(1);
+  const paymentStrategy = new DefaultPaymentStrategy(2);
   const serviceClientOptionsPaidCall = {
     // generated from marketplace : https://ropsten-dapp.singularitynet.io/servicedetails/org/6ce80f485dae487688c3a083688819bb/service/test_freecall
     tokenToMakeFreeCall: "0X9acaaa2613ffd52e242695aaafabf1bb3619b0cca9068212958b5a2a3718d0ed0a008051b973e4af1d2049364d3734c9e1ea699922d933db8b258a5be3ad4ae51c".toUpperCase(),
@@ -37,7 +37,7 @@ const main = async (firstNumber, secondNumber) => {
     disableBlockchainOperations: false,
     concurrency: true,
   };
-  console.log("payment strategy --------------------------", paymentStrategy);
+
   numbers.setA(firstNumber);
   numbers.setB(secondNumber);
   console.log("numbers set");
@@ -67,7 +67,7 @@ const main = async (firstNumber, secondNumber) => {
       service.CalculatorClient,
       groupName,
       paymentStrategy,
-      serviceClientOptionsPaidCall
+      serviceClientOptionsFreeCall
     );
     console.log("service client created success!");
 
