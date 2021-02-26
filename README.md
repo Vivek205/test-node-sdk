@@ -41,13 +41,15 @@ npm run reload
 ```
 
 ## Output
-You will find the output files in the `./segmentation_output` directory. 
-We are outputting the imageList and defaultImage from the response. 
-You can get the rest of the values too from the `serviceResult` object in the callback `serviceClient.service.segment`.
-Refer to the stubfiles for the appropriate getters and setters in case you find any difficulty.
+You will find the output files in the `./output` directory. 
 
 ## Using the application for a different service
-This application is developed to run concurrent calls on [Image Segmentation service](https://beta.singularitynet.io/servicedetails/org/snet/service/semantic-segmentation). Nevertheless, you can still customize the application to run a different service. Follow the below steps for the same  
+This application is developed to run concurrent calls on [Real time voice cloning](https://beta.singularitynet.io/servicedetails/org/snet/service/real-time-voice-cloning). Nevertheless, you can still customize the application to run a different service. Follow the below steps for the same  
 - Change the orgId and serviceId in the main method in index.js file. 
 - Generate and paste the nodejs stub files from the proto of the service into ./proto folder
+  - prerequisite: [install snet-cli](https://github.com/singnet/snet-cli#getting-started)  
+  ```bash
+  snet sdk nodejs org_id service_id ./proto
+  ```
+  replace the `org_id` and `service_id` with the actual organization id and service id respectively.
 - You can import the stub files and customize your request and parse your response accordingly.
