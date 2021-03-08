@@ -4,4 +4,3 @@ dist
 .vscode
 logs
 .env
-config.js
