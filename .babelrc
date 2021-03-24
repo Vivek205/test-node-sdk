@@ -9,6 +9,5 @@
       }
     ]
   ],
-  "ignore": ["./src/_example"],
-  "exclude": ["./src/proto"]
+  "exclude": ["./src/proto","./client_libraries"]
 }
